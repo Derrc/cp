@@ -5,6 +5,8 @@ using namespace std;
 
 /*
   DP, O(n) time
+  - calculate longest dist to leaf for each child node
+  - max diameter for current node will be top 2 child nodes with longest dist to leaf + 2
 */
 
 vector<vector<int>> adj;
