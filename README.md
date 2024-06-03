@@ -1,3 +1,3 @@
 # CP
 
-Solutions for various CP problems for my own practice
+Solutions for various competative problems from Codeforces, USACO, and CSES
