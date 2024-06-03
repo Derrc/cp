@@ -1,3 +1,3 @@
-# USACO
+# CP
 
-Solutions for various USACO and CSES problems for my own practice
+Solutions for various CP problems for my own practice
