@@ -4,7 +4,7 @@ using namespace std;
 
 /*
   Disjoint-Set Union
-  - TC: any m (find or union ops) on n objectss = amortized(mlogn)
+  - TC: any m (find or union ops) on n objects = amortized(mlogn)
   - each individual op is O(alpha(n)) where alpha is the ackermann function (grows slowly so basically constant time)
 */
 
