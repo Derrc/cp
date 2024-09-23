@@ -9,6 +9,7 @@ using namespace std;
   - when n is not a power of 2: 2*2^(ceil(log2n))-1 is needed -> approx 2^(ceil(log2n)+1) < O(4n)
   - extra nodes are not needed in array rep -> can just use 2n space
   - original array is stored from n -> 2n-1, root is stored in index 1
+  - can build in O(2n) time
 */
 
 class MinSegmentTree {
@@ -27,6 +28,9 @@ class MinSegmentTree {
         // segtree[ind^1] gets ind+1 if even or ind-1 if odd
         // gets sibling node in bt
         segtree[ind/2] = min(segtree[ind], segtree[ind^1]);
+        // ind = odd -> ind^1 subtracts 1
+        // ind = even -> ind^1 adds 1
+        // root node is 1
       }
     }
 

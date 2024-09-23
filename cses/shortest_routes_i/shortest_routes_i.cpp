@@ -39,7 +39,7 @@ void dijkstra(int start) {
   }
 }
 
-// O(n + mlogm), better in sparse graphs
+// O(n + mlogn), better in sparse graphs
 void dijkstra_pq(int start) {
   dist[start] = 0;
   // (dist, node)
@@ -50,6 +50,7 @@ void dijkstra_pq(int start) {
     pq.pop();
 
     // don't process node we've already visited
+    // shorter path was already found -> no need to keep processing this path
     if (-d_cur != dist[cur]) { continue; }
 
     for (auto e : adj[cur]) {
