@@ -3,8 +3,14 @@
 using namespace std;
 using ll = long long;
 
-// dynamic range queries: minimum and number of elements equal to minimum
-// store node (m, c) where m is minimum of current segment and c is count of min
+// minimum and number of elements equal to minimum
+// store node (min, count) where m is minimum of current segment and c is count of min
+
+// Combining
+// - when combining two segments, we need to know which segment contains the new min, or if they are equal
+// - if left.min == right.min, we can update the count of the combined segment to be left.count + right.count
+// - if left.min < right.min, we know the combined segment will now have a min of left.min and count of left.count
+// - similarly, if right.min < left.min, the combined segment will now have a min of right.min and count of right.count
 
 const ll inf = 1e13;
 
